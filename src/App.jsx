@@ -14,11 +14,29 @@
  * linked in the slides.
  */
 
-function App() {
 
-  return (
-    <h1>Start here</h1>
-  )
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Host from "./components/Host";
+import VanList from "./components/VanList";
+import VanDetail from "./components/VanDetail";
+import NotFound from "./components/NotFound";
+
+function App() {
+  
+    return (
+        <div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/vans" element={<VanList />} />
+                <Route path="/vans/:id" element={<VanDetail />} />
+                <Route path="/host" element={<Host />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </div>
+    );
 }
 
-export default App
+export default App;
