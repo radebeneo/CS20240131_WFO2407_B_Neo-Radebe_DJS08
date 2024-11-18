@@ -1,13 +1,10 @@
-import { Link } from "react-router-dom";
-
-function Home() {
+function About() {
     return (
-        <div className="home-container">
-            <h1>Welcome to VanLife!</h1>
-            <p>Discover your perfect van for your next adventure.</p>
-            <Link to="/vans" className="link-button">Explore Vans</Link>
+        <div className="about-page-content">
+            <h1>About VanLife</h1>
+            <p>VanLife is your trusted partner in adventure.</p>
         </div>
     );
 }
 
-export default Home;
+export default About;
